@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
 import { ClienteService } from "../services/cliente.service";
-import { CreateUserDto } from "../dto/create-user.dto";
 
 export class ClienteController {
     clienteService: ClienteService = new ClienteService();

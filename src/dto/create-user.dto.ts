@@ -4,20 +4,20 @@ import { validateByRegex, validateStringSize } from "../utils/validators";
 export class CreateUserDto {
     name: string;
     address: string;
-    phone: string;
+    phone?: string;
     postalCode: string;
 
-    constructor(name: string, address: string, phone: string, postalCode: string) {
+    constructor(name: string, address: string, postalCode: string, phone?: string) {
         if (!validateStringSize(2, 30, name)) {
-            throw new ValidationError('name deve ter entre 2 e 30 caracteres', 'name');
+            throw new ValidationError('Nome deve ter entre 2 e 30 caracteres', 'name');
         }
 
         if (!validateStringSize(2, 60, address)) {
             throw new ValidationError('Endereço deve ter entre 2 e 60 caracteres', 'address');
         }
 
-        if (!validateByRegex(/^\d{11}$/, phone)) {
-            throw new ValidationError('phone deve ter 11 dígitos numéricos', 'phone');
+        if (phone && !validateByRegex(/^\d{11}$/, phone)) {
+            throw new ValidationError('Telefone deve ter 11 dígitos numéricos', 'phone');
         }
 
         let cepReg = postalCode.includes('-') ? /^\d{5}-\d{3}$/ : /^\d{8}$/;

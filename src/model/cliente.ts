@@ -13,7 +13,7 @@ const clienteSchema = new mongoose.Schema({
     },
     phone: {
         type: String,
-        required: true,
+        required: false,
     },
     postalCode: {
         type: String,

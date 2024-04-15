@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import { routes } from './routes';
 import path from 'path';
+import { handleError } from './middlewares/error-handling';
 
 dotenv.config();
 
@@ -18,6 +19,8 @@ app.use("/api", routes)
 app.get("/", (req, res) => {
     return res.sendFile(path.join(__dirname, "../public/index.html"))
 })
+
+app.use(handleError)
 
 ;(async () => {
     if (!process.env.MONGO_URL) {

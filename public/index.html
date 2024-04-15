@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <main class="flex flex-col items-center justify-center gap-2 p-4 border-2 border-black rounded-lg h-96 w-full h-screen">
+        <h1>Cadastro de cliente</h1>
+        <form id="register-form">
+            <div">
+                <label for="name">Nome:</label>
+                <input
+                    class="border-2" 
+                    type="text" 
+                    name="name" 
+                    id="name">
+            </div>
+            <div>
+                <label for="CEP">CEP:</label>
+                <input
+                    class="border-2" 
+                    type="text" 
+                    name="CEP" 
+                    id="CEP">
+            </div>
+            <div>
+                <label for="address">Endereço:</label>
+                <input
+                    class="border-2" 
+                    type="text" 
+                    name="address" 
+                    id="address">
+            </div>
+            <div>
+                <label for="phone">Telefone:</label>
+                <input
+                    class="border-2" 
+                    type="text" 
+                    name="phone" 
+                    id="phone">
+            </div>
+            <button class="border-2 border-black p-1 rounded-lg" type="submit">Submit</button>
+        </form>
+    </main>
+    <script src="./js/form-handler.js"></script>
+</body>
+</html>

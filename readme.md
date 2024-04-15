@@ -2,7 +2,7 @@
 
 ## Como executar
 
-- Execute `npm ci` para instalar as dependência
+- Execute `npm ci` para instalar as dependências
 - Execute o comando `cp .template.env .env` e substitua o `MONGO_URL` pelo o seu próprio link
 - Execue `npm run dev`
 
@@ -14,7 +14,7 @@
 
 ```js
 {
-    "name": "NOME", // deve ter entre 2 e 30 caracteres
+	"name": "NOME", // deve ter entre 2 e 30 caracteres
 	"address": "ENDEREÇO", // deve ter entre 2 e 30 caracteres
 	"postalCode": "CEP", // deve ter 8 dígitos numéricos ou seguir o padrão 00000-000
 	"phone": "NUMERO DE TELEFONE", // OPCIONAL: deve ter 11 dígitos numéricos
